@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta nart" content="width=device-width, initial-scale=1.0">
+  <title>LumenMed</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Modal is hidden by default and only appears when button is clicked -->
+  <div id="appointment-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <h2>Schedule Your Appointment</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+        <br>
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+        <br>
+        <button type="submit" class="cta">Schedule Now</button>
+      </form>
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="header-content" style="display:flex; align-items:flex-start; gap:32px; position:relative; padding:2px 32px 4px 32px; height:165px; overflow:visible;">
+      <div class="logo-section" style="display:flex; flex-direction:column; align-items:center; position:relative; top:-20px;">
+        <img src="images/white_lumen_paint-removebg.png" alt="LumenMed Logo" class="header-logo" style="height:160px; width:auto; object-fit:contain;">
+        <div class="doctor-info" style="margin-top:-18px; text-align:center;">
+          <p style="margin:0; font-family:'Cinzel Decorative',serif; font-size:0.95rem; font-weight:600; color:#2e6edb; line-height:1.0;">Dr. Uday K Tata, MD</p>
+          <p style="margin:0; font-family:'Cinzel Decorative',serif; font-size:0.8rem; font-weight:400; color:#5a7ba6; line-height:1.0;">Internal Medicine</p>
+          <p style="margin:0; font-family:'Cinzel Decorative',serif; font-size:0.8rem; font-weight:400; color:#5a7ba6; line-height:1.0;">Board-certified</p>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0" style="margin-top:12px;">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="hamburger-dropdown" class="hamburger-dropdown" style="display:none;">
+        <li><a href="#aboutus-tile-modern" id="aboutus-link">About Us</a></li>
+        <li><a href="#services" id="services-link">Our Services</a></li>
+        <li><a href="#contact-qr" id="hamburger-contact-link">Contact Us</a></li>
+        <li><a href="#hours" id="hamburger-hours-link">Hours and Timing</a></li>
+        <li><a href="#" id="hamburger-portal-link">Patient Portal</a></li>
+      </ul>
+      <div style="flex:1;"></div>
+    </div>
+    <div class="header-search" style="position:absolute; top:105px; right:48px; max-width:300px; width:100%; display:flex; align-items:center; gap:6px;">
+      <input type="text" placeholder="Search..." class="search-input" style="flex:1; min-width:0; padding:10px 18px; border-radius:18px; border:1.5px solid #2e6edb; font-size:1.08rem; background:rgba(255,255,255,0.35); box-shadow:0 2px 8px rgba(44,130,201,0.08); color:#222; backdrop-filter:blur(2px);">
+      <button class="search-btn" style="padding:10px 18px; border-radius:18px; background:#2e6edb; color:#fff; border:none; font-size:1.08rem; font-family:'Cinzel Decorative',serif; cursor:pointer; white-space:nowrap; box-shadow:0 2px 8px rgba(44,130,201,0.10);">Search</button>
+    </div>
+  </header>
+  <div class="modern-toggle-container" style="display:flex; justify-content:flex-end; margin:32px 48px 0 0;">
+    <div class="modern-toggle" id="modern-toggle" style="background:linear-gradient(90deg,#7c3aed 0%,#26c6da 100%); border-radius:32px; padding:6px; display:flex; align-items:center; width:220px; height:48px; position:relative; box-shadow:0 2px 12px rgba(44,130,201,0.10);">
+      <button id="toggle-english" class="toggle-btn-active" style="flex:1; height:36px; border:none; border-radius:24px; background:#fff; color:#7c3aed; font-size:1.08rem; font-family:'Cinzel Decorative',serif; font-weight:600; cursor:pointer; transition:background 0.2s, color 0.2s;">English</button>
+      <button id="toggle-spanish" class="toggle-btn-inactive" style="flex:1; height:36px; border:none; border-radius:24px; background:transparent; color:#fff; font-size:1.08rem; font-family:'Cinzel Decorative',serif; font-weight:600; cursor:pointer; transition:background 0.2s, color 0.2s;">Spanish</button>
+    </div>
+  </div>
+  <div class="contact-qr-container" id="contact-qr" style="display:flex; justify-content:flex-end; margin:120px 40px 0 0;">
+    <img src="images/contact-QR.jpg" alt="Contact QR Code" style="width:120px; height:120px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+  </div>
+  <div class="container">
+    <section class="hero-text">
+      <h2 class="modern-tagline">Enriching your Health &amp; Wellness</h2>
+      <div class="appointment-details">
+        <div class="appointment-line">
+          <span>• Non Rushed Appointments</span>
+          <span>• Same Day Urgent Appointments</span>
+        </div>
+        <div class="appointment-line">
+          <span>• Telehealth Appointments</span>
+          <span>• Late and Some Weekend Appointments</span>
+        </div>
+      </div>
+      <div class="button-container">
+        <a class="cta" href="#" id="schedule-appointment-btn">Schedule Your Appointment</a>
+        <a class="cta" href="#" id="patient-portal-btn">Patient Portal</a>
+      </div>
+    </section>
+    <!-- Main hero section and appointment button remain on page 1 -->
+
+    <section id="page2" class="page-section">
+      <div class="aboutus-tile-modern" style="margin-top:320px;">
+        <div class="aboutus-img-content-wrap">
+          <img src="images/uday-dp.jpeg" alt="Dr. Uday" class="aboutus-img-modern">
+          <div class="aboutus-content-modern">
+            <h3>About Us</h3>
+            <p>Dr. Uday K. Tata is a board-certified Internal Medicine physician with over 20 years of experience, recognized as one of Georgia’s top doctors for his compassionate, patient-centered approach. Dedicated to quality healthcare, he has experience in mental healthcare and weight management, empowering patients with personalized, evidence-based care. Dr. Tata has served as a Director at Emory University, advancing clinical programs, and excels as a teaching physician in Internal Medicine, mentoring future healthcare leaders. His commitment to excellence ensures every patient receives expert, attentive care tailored to their needs.</p>
+          </div>
+        </div>
+        <img src="images/uday-award.jpg" alt="Dr. Uday Award" class="aboutus-award-img">
+      </div>
+      <div class="services-border-box" style="border: 2px solid #2e6edb; border-radius: 32px; background: rgba(255,255,255,0.8); box-shadow: 0 8px 32px rgba(44, 130, 201, 0.10); width: 1200px; height: 600px; margin: 48px auto; padding: 48px 32px; overflow: visible;">
+        <div class="our-services-btn-top" id="our-services-btn-top" style="text-align:center; margin-bottom:0;">
+          <button class="cta">Our Services</button>
+        </div>
+        <div class="features-overlap-row" style="margin-top:32px;">
+          <div class="feature-overlap-tile tile1">
+            <div class="tile-icon">⚖️</div>
+            <div class="tile-title">Weight Loss Management</div>
+            <div class="tile-desc">Personalized plans and support to help you achieve and maintain a healthy weight.</div>
+          </div>
+          <div class="feature-overlap-tile tile2">
+            <div class="tile-icon">🩺</div>
+            <div class="tile-title">Chronic Disease Management</div>
+            <div class="tile-desc">Comprehensive care for chronic conditions to improve your quality of life.</div>
+          </div>
+          <div class="feature-overlap-tile tile3">
+            <div class="tile-icon">🧠</div>
+            <div class="tile-title">Mental Health</div>
+            <div class="tile-desc">Compassionate support and resources for your mental well-being.</div>
+          </div>
+          <div class="feature-overlap-tile tile4">
+            <div class="tile-icon">🛡️</div>
+            <div class="tile-title">Preventative Health Care</div>
+            <div class="tile-desc">Proactive screenings and guidance to keep you healthy and prevent illness.</div>
+          </div>
+          <div class="feature-overlap-tile tile5">
+            <div class="tile-icon">💻</div>
+            <div class="tile-title">Telehealth Appointments</div>
+            <div class="tile-desc">Convenient virtual consultations from the comfort of your home.</div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="14" fill="#fff"/>
+              <rect x="10" y="10" width="12" height="12" rx="4" stroke="#2e9792" stroke-width="2" fill="none"/>
+              <circle cx="16" cy="16" r="3.5" stroke="#2e9792" stroke-width="2" fill="none"/>
+              <circle cx="20.5" cy="13.5" r="1" fill="#2e9792"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" fill="#fff"/><path d="M12 13h2v7h-2v-7zm1-2a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm3 2h2v1h.03c.28-.53.97-1.09 2-1.09 2.14 0 2.53 1.41 2.53 3.25V20h-2v-3.25c0-.78-.02-1.78-1.09-1.78-1.09 0-1.26.85-1.26 1.72V20h-2v-7z" fill="#2e9792"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" fill="#fff"/><path d="M22 13.5c-.2-1.1-1.2-1.5-2.2-1.5H12.2c-1 0-2 .4-2.2 1.5-.2 1.1-.2 2.3-.2 3.5s0 2.4.2 3.5c.2 1.1 1.2 1.5 2.2 1.5h7.6c1 0 2-.4 2.2-1.5.2-1.1.2-2.3.2-3.5s0-2.4-.2-3.5zm-7 5.5v-4l4 2-4 2z" fill="#2e9792"/></svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" fill="#fff"/><path d="M12 12l8 8m0-8l-8 8" stroke="#2e9792" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" fill="#fff"/><path d="M18 12h2v-2h-2c-2.2 0-4 1.8-4 4v2h-2v2h2v6h2v-6h2l1-2h-3v-2c0-1.1.9-2 2-2z" fill="#2e9792"/></svg>
+          </a>
+        </div>
+        <div class="footer-address">
+          <a href="https://www.google.com/maps/search/?api=1&query=2138+Scenic+Hwy+N+Suite+A+Snellville+GA+30078" target="_blank" style="color:#fff; text-decoration:underline;">2138 Scenic Hwy N Suite A<br>Snellville, GA 30078</a>
+        </div>
+        <div class="footer-hours" id="hours" style="text-align:center; color:#006d5b; font-size:1.1rem; margin:12px 0; font-family:'Cormorant Garamond',serif; font-weight:600;">
+          <strong>Hours and Timings: 08:30 AM - 04:30 PM</strong>
+        </div>
+        <div class="footer-legal">
+          <a href="#" id="terms-link">Terms and Conditions</a>
+          <span style="color:#fff; margin:0 8px;">|</span>
+          <a href="#" id="privacy-link">Privacy Policy</a>
+          <span style="color:#fff; margin:0 8px;">|</span>
+          <a href="#" id="hipaa-link">HIPAA Notice</a>
+        </div>
+        <div class="footer-copyright" style="text-align:center; color:#006d5b; font-size:0.95rem; margin:16px 0 8px 0; font-family:'Cinzel Decorative',serif;">
+          <p style="margin:0; font-weight:bold;">© 2025 LumenMed LLC. All rights reserved.</p>
+        </div>
+      </footer>
+    </section>
+    <div id="terms-modal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close" id="close-terms">&times;</span>
+        <h2>Terms of Use</h2>
+        <p>By accessing www.lumenmed.com (the “Website”), you agree to comply with these Terms of Use (“Terms”). If you do not accept all of these Terms, please do not use this Website. These Terms apply to all visitors, including current members of LumenMed LLC.</p>
+        <h3>Healthcare Disclaimer</h3>
+        <p>The content on this Website is provided for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Consult with our doctors for any questions regarding a medical condition for further confirmative suggestion.</p>
+        <h3>Copyright</h3>
+        <p>Materials on this Website are for your personal, non-commercial use only. You may not reproduce, distribute, publish, modify, copy, or transmit any material from this Website without prior written consent from LumenMed LLC.</p>
+      </div>
+    </div>
+    <div id="privacy-modal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close" id="close-privacy">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p><strong>Your Information. Your Rights. Our Responsibilities.</strong></p>
+        <p><strong>Effective 10/01/2025</strong></p>
+        <p>This notice explains how your medical information may be used and disclosed, and how you can access it. Please review carefully.</p>
+        <h3>Your Rights</h3>
+        <ul>
+          <li>Access your medical records (paper or electronic)</li>
+          <li>Request corrections to your records</li>
+          <li>Ask for confidential communications</li>
+          <li>Limit what information we use or share</li>
+          <li>Receive a list of disclosures</li>
+          <li>Obtain a copy of this privacy notice</li>
+          <li>Choose someone to act for you</li>
+          <li>File a complaint if you believe your privacy rights have been violated</li>
+        </ul>
+        <h3>Your Choices</h3>
+        <ul>
+          <li>Share information with family, friends, or others involved in your care</li>
+          <li>Provide disaster relief</li>
+          <li>Include you in a hospital directory</li>
+          <li>Provide mental health care</li>
+          <li>Market our services or sell your information</li>
+          <li>Contact you for fundraising</li>
+        </ul>
+        <h3>Our Uses and Disclosures</h3>
+        <ul>
+          <li>Treat you and coordinate your care</li>
+          <li>Run our organization and improve services</li>
+          <li>Bill for your services</li>
+          <li>Support public health and safety</li>
+          <li>Conduct research</li>
+          <li>Comply with legal requirements</li>
+          <li>Respond to organ/tissue donation requests</li>
+          <li>Work with medical examiners or funeral directors</li>
+          <li>Address workers’ compensation, law enforcement, and government requests</li>
+          <li>Respond to lawsuits and legal actions</li>
+        </ul>
+        <h3>Our Responsibilities</h3>
+        <ul>
+          <li>We are required by law to protect your health information.</li>
+          <li>We will notify you promptly of any breach that may compromise your information.</li>
+          <li>We will not use or share your information except as described here, unless you give us written permission.</li>
+          <li>You may revoke your permission at any time in writing.</li>
+        </ul>
+        <p>For more details, visit:<br>
+          <a href="https://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/noticepp.html" target="_blank">www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/noticepp.html</a>
+        </p>
+        <h3>Changes to This Notice</h3>
+        <p>We may update this notice. Changes will apply to all information we have about you. The latest version will be available upon request, in our office, and on our website.</p>
+      </div>
+    </div>
+    <div id="hipaa-modal" class="modal" style="display:none;">
+      <div class="modal-content" style="max-width:800px; max-height:80vh; overflow-y:auto;">
+        <span class="close" id="close-hipaa">&times;</span>
+        <h2>HIPAA Notice of Privacy Practices</h2>
+        <p><strong>Effective Date: October 1, 2025</strong></p>
+        <p><strong>THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.</strong></p>
+        
+        <h3>Protected Health Information</h3>
+        <p>Protected health information ("PHI") relates to information about you and your health, which could be used to identify you. Each time that you visit us, we create a medical record of your PHI and services that you receive.</p>
+        
+        <h3>Our Obligations Regarding Your Protected Health Information</h3>
+        <p>We recognize that information about you and your health is confidential, and we are committed to protecting this information. We are required by law to preserve the privacy and security of your PHI and to provide you with this Notice of our legal duties and privacy practices.</p>
+        
+        <h3>How We May Use and Disclose Your Protected Health Information</h3>
+        <p>We may use or disclose your PHI for the following purposes:</p>
+        
+        <h4>Treatment</h4>
+        <p>We can use your PHI and share it with other professionals who are treating you.</p>
+        <ul>
+          <li><strong>Example:</strong> A doctor treating you for an injury asks another doctor about your overall health condition.</li>
+        </ul>
+        
+        <h4>Payment</h4>
+        <p>We can use and share your PHI to bill and obtain payment from health plans or other entities.</p>
+        <ul>
+          <li><strong>Example:</strong> We give information about you to your health insurance plan so it will pay for your services.</li>
+        </ul>
+        
+        <h4>Healthcare Operations</h4>
+        <p>We can use and share your PHI to run our practice, improve your care, and contact you when necessary.</p>
+        <ul>
+          <li><strong>Example:</strong> We use health information about you to manage your treatment and services.</li>
+        </ul>
+        
+        <h4>Public Health and Safety</h4>
+        <p>We can share your PHI for certain situations such as:</p>
+        <ul>
+          <li>Preventing disease</li>
+          <li>Helping with product recalls</li>
+          <li>Reporting adverse reactions to medications</li>
+          <li>Reporting suspected abuse, neglect, or domestic violence</li>
+          <li>Preventing or reducing a serious threat to anyone's health or safety</li>
+        </ul>
+        
+        <h3>Your Rights Regarding Your PHI</h3>
+        <p>You have the following rights regarding your PHI:</p>
+        
+        <h4>Access Your Medical Records</h4>
+        <p>You can ask to see or receive an electronic or paper copy of your medical record and other PHI that we have about you. We will provide a copy or summary, usually within 30 days of your request.</p>
+        
+        <h4>Request Corrections</h4>
+        <p>You can ask us to correct PHI about you that you think is incorrect or incomplete. We may say "no" to your request, but we will tell you why in writing within 60 days.</p>
+        
+        <h4>Request Confidential Communications</h4>
+        <p>You can ask us to contact you in a specific way (for example, home or office phone) or to send mail to a different address. We will say "yes" to all reasonable requests.</p>
+        
+        <h4>Request Restrictions</h4>
+        <p>You can ask us not to use or share certain PHI in connection with our services. We are not required to agree to your request, and we may say "no" if it would affect your care.</p>
+        
+        <h4>Get a List of Disclosures</h4>
+        <p>You can ask for a list of the times we have shared your PHI for six years prior to the date you ask, who we shared it with, and why.</p>
+        
+        <h4>Choose Someone to Act for You</h4>
+        <p>If you have given someone medical power of attorney or if someone is your legal guardian, that person can exercise your rights and make choices about your health information.</p>
+        
+        <h3>File a Complaint</h3>
+        <p>If you believe your privacy rights have been violated, you may file a complaint with us or with the U.S. Department of Health and Human Services. We will not retaliate against you for filing a complaint.</p>
+        
+        <p><strong>Contact Information:</strong><br>
+        LumenMed<br>
+        2138 Scenic Hwy N Suite A<br>
+        Snellville, GA 30078</p>
+        
+        <p>For more information about privacy rights, visit: <a href="https://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/noticepp.html" target="_blank">www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/noticepp.html</a></p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script>
+    </script>
+  </body>
+  </html>
