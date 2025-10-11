@@ -57,46 +57,92 @@
           modal.style.display = 'none';
         }
       };
+      // Enhanced Mobile-Friendly Hamburger Menu
       var hamburgerMenu = document.getElementById('hamburger-menu');
       var dropdown = document.getElementById('hamburger-dropdown');
+      var isMenuOpen = false;
 
-      hamburgerMenu.onclick = function() {
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+      // Click handler for hamburger menu
+      hamburgerMenu.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        isMenuOpen = !isMenuOpen;
+        dropdown.style.display = isMenuOpen ? 'block' : 'none';
+        hamburgerMenu.classList.toggle('active', isMenuOpen);
       };
-      hamburgerMenu.onmouseenter = function() {
-        dropdown.style.display = 'block';
-      };
-      hamburgerMenu.onmouseleave = function() {
-        setTimeout(function() {
-          if (!dropdown.matches(':hover')) {
+
+      // Mobile-specific: Remove hover behavior on small screens
+      function updateMenuBehavior() {
+        var isMobile = window.innerWidth <= 768;
+        
+        if (isMobile) {
+          // Remove hover events for mobile
+          hamburgerMenu.onmouseenter = null;
+          hamburgerMenu.onmouseleave = null;
+          dropdown.onmouseleave = null;
+        } else {
+          // Desktop hover behavior
+          hamburgerMenu.onmouseenter = function() {
+            dropdown.style.display = 'block';
+          };
+          hamburgerMenu.onmouseleave = function() {
+            setTimeout(function() {
+              if (!dropdown.matches(':hover')) {
+                dropdown.style.display = 'none';
+              }
+            }, 150);
+          };
+          dropdown.onmouseleave = function() {
             dropdown.style.display = 'none';
-          }
-        }, 150);
-      };
-      dropdown.onmouseleave = function() {
-        dropdown.style.display = 'none';
-      };
+          };
+        }
+      }
+
+      // Initialize and update on resize
+      updateMenuBehavior();
+      window.addEventListener('resize', function() {
+        updateMenuBehavior();
+        if (window.innerWidth > 768) {
+          isMenuOpen = false;
+          dropdown.style.display = 'none';
+          hamburgerMenu.classList.remove('active');
+        }
+      });
+
+      // Close menu when clicking outside
       window.onclick = function(event) {
         if (event.target !== dropdown && event.target !== hamburgerMenu && !hamburgerMenu.contains(event.target)) {
+          isMenuOpen = false;
           dropdown.style.display = 'none';
+          hamburgerMenu.classList.remove('active');
         }
       };
-      document.getElementById('aboutus-link').onclick = function(e) {
-        e.preventDefault();
-        var aboutTile = document.querySelector('.aboutus-tile-modern');
-        if (aboutTile) {
-          aboutTile.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-        document.getElementById('hamburger-dropdown').style.display = 'none';
-      };
-      document.getElementById('services-link').onclick = function(e) {
-        e.preventDefault();
-        var servicesTile = document.getElementById('our-services-btn-top');
-        if (servicesTile) {
-          servicesTile.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-        document.getElementById('hamburger-dropdown').style.display = 'none';
-      };
+
+      // Enhanced menu link handlers
+      function createMenuLinkHandler(targetSelector, offset = -50) {
+        return function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Close menu
+          isMenuOpen = false;
+          dropdown.style.display = 'none';
+          hamburgerMenu.classList.remove('active');
+          
+          // Smooth scroll to target
+          var target = document.querySelector(targetSelector);
+          if (target) {
+            var targetPosition = target.getBoundingClientRect().top + window.pageYOffset + offset;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        };
+      }
+
+      document.getElementById('aboutus-link').onclick = createMenuLinkHandler('.aboutus-tile-modern');
+      document.getElementById('services-link').onclick = createMenuLinkHandler('#our-services-btn-top', -30);
       document.addEventListener('DOMContentLoaded', function() {
         var searchBtn = document.querySelector('.search-btn');
         var searchInput = document.querySelector('.search-input');
