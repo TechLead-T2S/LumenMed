@@ -1,18 +1,149 @@
-/* Force Cinzel Decorative font for all headings, buttons, and feature titles */
-h1, h2, h3, h4, h5, h6, .cta, .feature h3, .footer, .header, .modern-tagline, .tagline {
+/* ULTIMATE FONT OVERRIDE - Force Cinzel Decorative on everything */
+* {
   font-family: 'Cinzel Decorative', serif !important;
 }
-body, p, .description, .feature p {
-  font-family: 'Cinzel Decorative', serif;
+
+*:before, *:after {
+  font-family: 'Cinzel Decorative', serif !important;
 }
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, i, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, input, textarea, select, option {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* GLOBAL FONT OVERRIDE - Force Cinzel Decorative on everything */
+html {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+html * {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+html *:before {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+html *:after {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* Force Cinzel Decorative font for ALL elements across the entire page */
+* {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+*::before, *::after {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+html {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+body {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* All heading elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* All text elements */
+p, span, div, a, strong, em, b, i, small, big {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* List elements */
+ul, ol, li, dl, dt, dd {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* Form elements */
+input, textarea, select, button, label, fieldset, legend {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* Table elements */
+table, th, td, caption {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* Class-based selectors */
+.cta, .feature, .footer, .header, .modern-tagline, .tagline, .description {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* Navigation elements */
+nav, .hamburger-dropdown, .hamburger-dropdown li, .hamburger-dropdown a {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* Modal and content areas */
+.modal-content, .footer-content, .footer-social, .footer-legal {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* News bulletin and cloud elements */
+.news-content, .cloud-quote, .cloud-quote-existing {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* Search elements */
+.search-input, .search-btn {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
+/* Scrolling News Bulletin Styles */
+.news-bulletin-container {
+  background: linear-gradient(90deg, #2e6edb 0%, #26c6da 100%);
+  padding: 8px 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(46, 110, 219, 0.15);
+}
+
+.news-bulletin {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.news-content {
+  display: inline-block;
+  animation: scroll-continuous 60s linear infinite;
+  color: white;
+  font-family: 'Cinzel Decorative', serif !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  width: max-content;
+  transform: translateX(0%);
+}
+
+.news-text {
+  margin-right: 150px;
+  display: inline-block;
+}
+
+@keyframes scroll-continuous {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .modern-tagline {
   font-size: 2.3rem;
   font-weight: 700;
   color: #009688;
-  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Cinzel Decorative', serif !important;
   letter-spacing: 1px;
   margin-bottom: 18px;
-  margin-top: -30px;
+  margin-top: -60px;
   text-shadow: 0 2px 8px rgba(0,150,136,0.10);
   background: transparent !important;
   background-color: transparent !important;
@@ -20,7 +151,7 @@ body, p, .description, .feature p {
 .modern-desc {
   font-size: 1.15rem;
   color: #00796b;
-  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Cinzel Decorative', serif !important;
   margin-bottom: 28px;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -33,7 +164,7 @@ body, p, .description, .feature p {
   padding: 14px 38px;
   border-radius: 24px;
   text-decoration: none;
-  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Cinzel Decorative', serif !important;
   font-weight: 600;
   font-size: 1.15rem;
   box-shadow: 0 2px 12px rgba(0,150,136,0.10);
@@ -48,9 +179,10 @@ body, p, .description, .feature p {
 .button-container {
   display: flex;
   gap: 16px;
-  margin-top: 8px;
+  margin-top: 0px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .button-container .cta {
@@ -59,9 +191,241 @@ body, p, .description, .feature p {
   max-width: 240px;
   text-align: center;
 }
+
+/* Appointment button with cloud quote styling */
+.appointment-button-with-quote {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-direction: row;
+  flex: none;
+}
+
+.cloud-quote {
+  position: relative;
+  width: 180px;
+  height: 65px;
+  background: white;
+  border: 3px solid #4fc3f7;
+  border-radius: 32px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2196f3;
+  text-align: center;
+  line-height: 59px;
+  font-family: 'Cinzel Decorative', serif !important;
+  letter-spacing: 0.5px;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(79, 195, 247, 0.2);
+  order: 1;
+  flex-shrink: 0;
+}
+
+/* Remove any button-like appearance */
+.cloud-quote:hover {
+  cursor: default;
+}
+
+/* Large cloud bump on top left */
+.cloud-quote::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  background: white;
+  border: 3px solid #4fc3f7;
+  border-bottom: none;
+  border-radius: 50% 50% 0 0;
+  z-index: 1;
+}
+
+/* Medium cloud bump on top right */
+.cloud-quote::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 25px;
+  width: 35px;
+  height: 35px;
+  background: white;
+  border: 3px solid #4fc3f7;
+  border-bottom: none;
+  border-radius: 50% 50% 0 0;
+  z-index: 1;
+}
+
+/* Speech bubble tail pointing to button */
+.cloud-quote span::before {
+  content: '';
+  position: absolute;
+  right: -23px;
+  bottom: 15px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 23px solid white;
+  z-index: 2;
+}
+
+/* Speech bubble tail border */
+.cloud-quote span::after {
+  content: '';
+  position: absolute;
+  right: -27px;
+  bottom: 14px;
+  width: 0;
+  height: 0;
+  border-top: 19px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 27px solid #4fc3f7;
+  z-index: 1;
+}
+
+/* Text styling */
+.cloud-quote span {
+  position: relative;
+  z-index: 10;
+  display: block;
+  text-transform: uppercase;
+}
+
+.appointment-button-with-quote .cta {
+  order: 2;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+/* Portal button with existing patient cloud styling */
+.portal-button-with-quote {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-direction: row;
+  flex: none;
+}
+
+.cloud-quote-existing {
+  position: relative;
+  width: 180px;
+  height: 65px;
+  background: white;
+  border: 3px solid #26c6da;
+  border-radius: 32px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0288d1;
+  text-align: center;
+  line-height: 59px;
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 0.5px;
+  animation: float 3s ease-in-out infinite 1.5s;
+  box-shadow: 0 4px 15px rgba(38, 198, 218, 0.2);
+  order: 2;
+  flex-shrink: 0;
+}
+
+/* Remove any button-like appearance */
+.cloud-quote-existing:hover {
+  cursor: default;
+}
+
+/* Large cloud bump on top left for existing patient */
+.cloud-quote-existing::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  background: white;
+  border: 3px solid #26c6da;
+  border-bottom: none;
+  border-radius: 50% 50% 0 0;
+  z-index: 1;
+}
+
+/* Medium cloud bump on top right for existing patient */
+.cloud-quote-existing::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 25px;
+  width: 35px;
+  height: 35px;
+  background: white;
+  border: 3px solid #26c6da;
+  border-bottom: none;
+  border-radius: 50% 50% 0 0;
+  z-index: 1;
+}
+
+/* Speech bubble tail pointing to patient portal button */
+.cloud-quote-existing span::before {
+  content: '';
+  position: absolute;
+  left: -23px;
+  bottom: 15px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 23px solid white;
+  z-index: 2;
+}
+
+/* Speech bubble tail border for existing patient */
+.cloud-quote-existing span::after {
+  content: '';
+  position: absolute;
+  left: -27px;
+  bottom: 14px;
+  width: 0;
+  height: 0;
+  border-top: 19px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-right: 27px solid #26c6da;
+  z-index: 1;
+}
+
+/* Text styling for existing patient */
+.cloud-quote-existing span {
+  position: relative;
+  z-index: 10;
+  display: block;
+  text-transform: uppercase;
+}
+
+.portal-button-with-quote .cta {
+  order: 1;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.02);
+  }
+}
+
+.cloud-quote:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 6px 16px rgba(79, 195, 247, 0.4);
+  transition: all 0.3s ease;
+}
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Cinzel Decorative', serif !important;
   background: #f7fafd url('images/bg-image.svg') no-repeat center center fixed;
   background-size: cover;
   color: #222;
@@ -135,6 +499,20 @@ body {
 
 /* Show hamburger on mobile */
 @media (max-width: 768px) {
+  /* Mobile News Bulletin */
+  .news-bulletin-container {
+    padding: 6px 0;
+  }
+  
+  .news-content {
+    font-size: 0.95rem;
+    animation: scroll-continuous 55s linear infinite;
+  }
+  
+  .news-text {
+    margin-right: 120px;
+  }
+  
   .hamburger {
     display: flex !important;
     flex-direction: column;
@@ -156,6 +534,103 @@ body {
     transition: all 0.3s ease;
     border-radius: 1px;
   }
+  
+  /* Show cloud quote on mobile in single row with emoji */
+  .cloud-quote {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 110px !important;
+    height: 50px !important;
+    font-size: 0.65rem !important;
+    font-weight: 700 !important;
+    color: #2196f3 !important;
+    background: transparent !important;
+    border: none !important;
+    position: relative !important;
+    z-index: 2 !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+  }
+  
+  .cloud-quote::before {
+    content: "☁️" !important;
+    font-size: 2rem !important;
+    position: absolute !important;
+    top: -10px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+  }
+  
+  .cloud-quote span {
+    position: relative !important;
+    z-index: 3 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    padding: 3px 6px !important;
+    border-radius: 8px !important;
+    border: 1px solid #2196f3 !important;
+  }
+  
+  .appointment-button-with-quote {
+    flex-direction: row !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    margin-bottom: 25px !important;
+  }
+  
+  /* Show existing patient cloud on mobile in single row with emoji */
+  .cloud-quote-existing {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 90px !important;
+    height: 42px !important;
+    font-size: 0.58rem !important;
+    font-weight: 700 !important;
+    color: #0288d1 !important;
+    background: transparent !important;
+    border: none !important;
+    position: relative !important;
+    z-index: 2 !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+    margin-left: 15px !important;
+    margin-top: 20px !important;
+  }
+  
+  .cloud-quote-existing::before {
+    content: "☁️" !important;
+    font-size: 1.7rem !important;
+    position: absolute !important;
+    top: -8px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+  }
+  
+  .cloud-quote-existing span {
+    position: relative !important;
+    z-index: 3 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    padding: 2px 5px !important;
+    border-radius: 8px !important;
+    border: 1px solid #0288d1 !important;
+  }
+  
+  .portal-button-with-quote {
+    flex-direction: row !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    margin-bottom: 10px !important;
+    margin-top: 15px !important;
+  }
 }
 html, body {
   width: 100vw;
@@ -164,7 +639,7 @@ html, body {
 }
 body {
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Cinzel Decorative', serif !important;
   background: #f7fafd url('images/bg-image.svg') no-repeat center center fixed;
   background-size: cover;
   color: #222;
@@ -473,7 +948,7 @@ body {
   font-weight: bold;
   font-size: 1.15rem;
   text-align: center;
-  margin: 15px auto;
+  margin: 10px auto;
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
@@ -1252,6 +1727,20 @@ body {
   }
 }
 @media (max-width: 480px) {
+  /* Small Mobile News Bulletin */
+  .news-bulletin-container {
+    padding: 5px 0;
+  }
+  
+  .news-content {
+    font-size: 0.85rem;
+    animation: scroll-continuous 50s linear infinite;
+  }
+  
+  .news-text {
+    margin-right: 100px;
+  }
+  
   .features-overlap-row {
     min-height: auto;
     margin: -60px auto 120px auto !important;
@@ -1283,6 +1772,103 @@ body {
   .tile-desc {
     font-size: 0.9rem;
     line-height: 1.3;
+  }
+  
+  /* Show cloud quote on smaller mobile devices in single row with emoji */
+  .cloud-quote {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 95px !important;
+    height: 45px !important;
+    font-size: 0.6rem !important;
+    font-weight: 700 !important;
+    color: #2196f3 !important;
+    background: transparent !important;
+    border: none !important;
+    position: relative !important;
+    z-index: 2 !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+  }
+  
+  .cloud-quote::before {
+    content: "☁️" !important;
+    font-size: 1.8rem !important;
+    position: absolute !important;
+    top: -8px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+  }
+  
+  .cloud-quote span {
+    position: relative !important;
+    z-index: 3 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    padding: 2px 4px !important;
+    border-radius: 6px !important;
+    border: 1px solid #2196f3 !important;
+  }
+  
+  .appointment-button-with-quote {
+    flex-direction: row !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    margin-bottom: 20px !important;
+  }
+  
+  /* Show existing patient cloud on smaller mobile devices in single row with emoji */
+  .cloud-quote-existing {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 80px !important;
+    height: 38px !important;
+    font-size: 0.52rem !important;
+    font-weight: 700 !important;
+    color: #0288d1 !important;
+    background: transparent !important;
+    border: none !important;
+    position: relative !important;
+    z-index: 2 !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+    margin-left: 12px !important;
+    margin-top: 18px !important;
+  }
+  
+  .cloud-quote-existing::before {
+    content: "☁️" !important;
+    font-size: 1.5rem !important;
+    position: absolute !important;
+    top: -6px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+  }
+  
+  .cloud-quote-existing span {
+    position: relative !important;
+    z-index: 3 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    padding: 1px 3px !important;
+    border-radius: 6px !important;
+    border: 1px solid #0288d1 !important;
+  }
+  
+  .portal-button-with-quote {
+    flex-direction: row !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    margin-bottom: 8px !important;
+    margin-top: 12px !important;
   }
 }
 
@@ -1327,7 +1913,7 @@ body {
   }
   
   .header-logo {
-    height: 90px !important;
+    height: 140px !important;
     width: auto !important;
     margin: 0;
   }
@@ -1338,8 +1924,8 @@ body {
   }
   
   .doctor-info p {
-    font-size: 0.75rem !important;
-    line-height: 1.1 !important;
+    font-size: 0.58rem !important;
+    line-height: 1.0 !important;
     margin: 1px 0 !important;
   }
   
@@ -1609,12 +2195,12 @@ body {
   }
   
   .header-logo {
-    height: 75px !important;
+    height: 120px !important;
   }
   
   .doctor-info p {
-    font-size: 0.65rem !important;
-    line-height: 1.1 !important;
+    font-size: 0.52rem !important;
+    line-height: 1.0 !important;
     margin: 1px 0 !important;
   }
   
@@ -1760,10 +2346,29 @@ body {
     order: 4;
     display: flex !important;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 35px;
+    margin-top: 20px;
+    margin-bottom: 15px;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .button-container .cta {
+    flex: 0 0 auto !important;
+    max-width: 200px !important;
+    min-width: 180px !important;
+    margin: 0 !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    padding: 12px 8px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    line-height: 1.2 !important;
+    height: auto !important;
+    min-height: 44px !important;
   }
   
   .button-container .cta {
@@ -1993,11 +2598,17 @@ body {
   }
   
   .button-container .cta {
-    max-width: 260px !important;
-    font-size: 0.95rem !important;
-    padding: 10px 16px !important;
+    max-width: 170px !important;
+    font-size: 0.75rem !important;
+    padding: 12px 6px !important;
     width: 100% !important;
     display: block !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    line-height: 1.2 !important;
+    height: auto !important;
+    min-height: 44px !important;
   }
 }
 

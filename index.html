@@ -4,8 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LumenMed</title>
-  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.co        <h3>5. Our Security Practices</h3>
+        <p>We prioritize the security of your information through:</p>
+        <ul>
+          <li>Administrative safeguards (e.g., staff training on HIPAA).</li>
+          <li>Physical safeguards (e.g., locked filing cabinets, secure office access).</li>
+          <li>Technical safeguards (e.g., encrypted electronic records, firewalls).</li>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Modal is hidden by default and only appears when button is clicked -->
@@ -57,6 +65,21 @@
       <button class="search-btn" style="padding:10px 18px; border-radius:18px; background:#2e6edb; color:#fff; border:none; font-size:1.08rem; font-family:'Cinzel Decorative',serif; cursor:pointer; white-space:nowrap; box-shadow:0 2px 8px rgba(44,130,201,0.10);">Search</button>
     </div>
   </header>
+  
+  <!-- Scrolling News Bulletin -->
+  <div class="news-bulletin-container">
+    <div class="news-bulletin">
+      <div class="news-content">
+        <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+      </div>
+    </div>
+  </div>
+  
   <div class="modern-toggle-container" style="display:flex; justify-content:flex-end; margin:32px 48px 0 0;">
     <div class="modern-toggle" id="modern-toggle" style="background:linear-gradient(90deg,#7c3aed 0%,#26c6da 100%); border-radius:32px; padding:6px; display:flex; align-items:center; width:220px; height:48px; position:relative; box-shadow:0 2px 12px rgba(44,130,201,0.10);">
       <button id="toggle-english" class="toggle-btn-active" style="flex:1; height:36px; border:none; border-radius:24px; background:#fff; color:#7c3aed; font-size:1.08rem; font-family:'Cinzel Decorative',serif; font-weight:600; cursor:pointer; transition:background 0.2s, color 0.2s;">English</button>
@@ -80,8 +103,18 @@
         </div>
       </div>
       <div class="button-container">
-        <a class="cta" href="#" id="schedule-appointment-btn">Schedule Your Appointment</a>
-        <a class="cta" href="#" id="patient-portal-btn">Patient Portal</a>
+        <div class="appointment-button-with-quote">
+          <div class="cloud-quote">
+            <span>New Patient</span>
+          </div>
+          <a class="cta" href="#" id="schedule-appointment-btn">Schedule Your Appointment</a>
+        </div>
+        <div class="portal-button-with-quote">
+          <a class="cta" href="#" id="patient-portal-btn">Patient Portal</a>
+          <div class="cloud-quote-existing">
+            <span>Existing Patient</span>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Main hero section and appointment button remain on page 1 -->
@@ -164,7 +197,7 @@
         <div class="footer-address">
           <a href="https://www.google.com/maps/search/?api=1&query=2138+Scenic+Hwy+N+Suite+A+Snellville+GA+30078" target="_blank" style="color:#fff; text-decoration:underline;">2138 Scenic Hwy N Suite A<br>Snellville, GA 30078</a>
         </div>
-        <div class="footer-hours" id="hours" style="text-align:center; color:#006d5b; font-size:1.1rem; margin:12px 0; font-family:'Cormorant Garamond',serif; font-weight:600;">
+        <div class="footer-hours" id="hours" style="text-align:center; color:#006d5b; font-size:1.1rem; margin:12px 0; font-family:'Cinzel Decorative',serif; font-weight:600;">
           <strong>Hours and Timings: 08:30 AM - 04:30 PM</strong>
         </div>
         <div class="footer-legal">
@@ -196,30 +229,57 @@
     <div id="privacy-modal" class="modal" style="display:none;">
       <div class="modal-content">
         <span class="close" id="close-privacy">&times;</span>
-        <h2>Privacy Policy</h2>
-        <p><strong>Your Information. Your Rights. Our Responsibilities.</strong></p>
-        <p><strong>Effective 10/01/2025</strong></p>
-        <p>This notice explains how your medical information may be used and disclosed, and how you can access it. Please review carefully.</p>
-        <h3>Your Rights</h3>
+        <h2>Privacy Policy for LumenMed LLC Internal Medicine Clinic</h2>
+        <p><strong>Effective Date: October 10, 2025</strong></p>
+        <p><strong>Last Updated: October 10, 2025</strong></p>
+        
+        <p>LumenMed LLC Internal Medicine Clinic ("we," "us," or "our") is committed to protecting the privacy and security of your personal health information. We are located at 2138 Scenic Hwy N Ste A, Snellville, GA 30078. This Privacy Policy explains how we collect, use, disclose, and safeguard your information in accordance with the Health Insurance Portability and Accountability Act (HIPAA) and other applicable laws. By using our services, you consent to the practices described in this policy.</p>
+        
+        <p>If you have questions about this Privacy Policy, please contact us at [Insert Phone Number] or [Insert Email Address].</p>
+        <h3>1. Information We Collect</h3>
+        <p>We collect personal information to provide high-quality medical care and administrative services. This includes:</p>
         <ul>
-          <li>Access your medical records (paper or electronic)</li>
-          <li>Request corrections to your records</li>
-          <li>Ask for confidential communications</li>
-          <li>Limit what information we use or share</li>
-          <li>Receive a list of disclosures</li>
-          <li>Obtain a copy of this privacy notice</li>
-          <li>Choose someone to act for you</li>
-          <li>File a complaint if you believe your privacy rights have been violated</li>
+          <li><strong>Protected Health Information (PHI):</strong> Medical history, treatment records, test results, billing information, and other health-related data.</li>
+          <li><strong>Personal Identifiers:</strong> Name, address, date of birth, contact details, insurance information, and Social Security number (if required for billing).</li>
+          <li><strong>Other Data:</strong> Appointment preferences, emergency contacts, and feedback provided during visits or through our patient portal.</li>
         </ul>
-        <h3>Your Choices</h3>
+        <p>We collect this information directly from you, your authorized representatives, or third parties such as labs or insurers.</p>
+
+        <h3>2. How We Use Your Information</h3>
+        <p>We use your information for the following purposes:</p>
         <ul>
-          <li>Share information with family, friends, or others involved in your care</li>
-          <li>Provide disaster relief</li>
-          <li>Include you in a hospital directory</li>
-          <li>Provide mental health care</li>
-          <li>Market our services or sell your information</li>
-          <li>Contact you for fundraising</li>
+          <li>To provide, coordinate, and manage your healthcare treatment (e.g., scheduling appointments, prescribing medications).</li>
+          <li>For payment and billing (e.g., submitting claims to insurers, collecting copays).</li>
+          <li>For healthcare operations (e.g., quality improvement, staff training, compliance audits).</li>
+          <li>To communicate with you about your care, appointments, or health reminders via phone, email, text, or mail.</li>
+          <li>For legal compliance, such as reporting to public health authorities or responding to court orders.</li>
         </ul>
+        <p>We will not use or disclose your PHI for marketing purposes without your explicit written authorization, except as permitted by law (e.g., treatment alternatives).</p>
+        <h3>3. How We Disclose Your Information</h3>
+        <p>We may share your information with:</p>
+        <ul>
+          <li><strong>Healthcare Providers:</strong> Other doctors, specialists, or facilities involved in your care.</li>
+          <li><strong>Business Associates:</strong> Vendors who assist us (e.g., billing services, electronic health record systems) under strict confidentiality agreements.</li>
+          <li><strong>Insurers and Payers:</strong> To process claims and payments.</li>
+          <li><strong>Family or Friends:</strong> If you authorize it or in emergencies where it's in your best interest.</li>
+          <li><strong>Legal Authorities:</strong> As required by law (e.g., abuse reporting, subpoenas).</li>
+        </ul>
+        <p>We limit disclosures to the minimum necessary information. All disclosures comply with HIPAA's minimum necessary rule.</p>
+
+        <h3>Mobile Information Protection</h3>
+        <p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+
+        <h3>4. Your Rights Under HIPAA</h3>
+        <p>As a patient, you have the following rights regarding your PHI:</p>
+        <ul>
+          <li><strong>Access:</strong> Request copies of your records (fees may apply for copies).</li>
+          <li><strong>Amendment:</strong> Request corrections to inaccurate information.</li>
+          <li><strong>Accounting of Disclosures:</strong> Receive a list of when and to whom we disclosed your PHI (last 6 years).</li>
+          <li><strong>Restriction Requests:</strong> Ask us to limit uses or disclosures (we are not always required to agree).</li>
+          <li><strong>Confidential Communications:</strong> Request alternative ways to receive information (e.g., private mail instead of home address).</li>
+          <li><strong>Breach Notification:</strong> We will notify you if there's a breach of your unsecured PHI.</li>
+        </ul>
+        <p>To exercise these rights, submit a written request to our Privacy Officer, Uday Tata MD, at Uday.Tata@Lumenmed.org or the address above.</p>
         <h3>Our Uses and Disclosures</h3>
         <ul>
           <li>Treat you and coordinate your care</li>
@@ -233,18 +293,34 @@
           <li>Address workers’ compensation, law enforcement, and government requests</li>
           <li>Respond to lawsuits and legal actions</li>
         </ul>
-        <h3>Our Responsibilities</h3>
+        <h3>9. Changes to This Privacy Policy</h3>
+        <p>We may update this policy to reflect legal changes or operational needs. We will notify you of material changes via email, mail, or at your next visit. Continued use of our services after changes constitutes acceptance.</p>
+
+        <h3>10. Complaints</h3>
+        <p>If you believe your privacy rights have been violated, file a complaint with:</p>
         <ul>
-          <li>We are required by law to protect your health information.</li>
-          <li>We will notify you promptly of any breach that may compromise your information.</li>
-          <li>We will not use or share your information except as described here, unless you give us written permission.</li>
-          <li>You may revoke your permission at any time in writing.</li>
+          <li>Our Privacy Officer: Uday Tata MD, Uday.Tata@Lumenmed.org.</li>
+          <li>The U.S. Department of Health and Human Services (HHS) Office for Civil Rights: <a href="https://www.hhs.gov/ocr" target="_blank">www.hhs.gov/ocr</a>.</li>
         </ul>
-        <p>For more details, visit:<br>
-          <a href="https://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/noticepp.html" target="_blank">www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/noticepp.html</a>
-        </p>
-        <h3>Changes to This Notice</h3>
-        <p>We may update this notice. Changes will apply to all information we have about you. The latest version will be available upon request, in our office, and on our website.</p>
+        <p>We will not retaliate against you for filing a complaint.</p>
+
+        <h3>5. Our Security Practices</h3>
+        <p>We prioritize the security of your information through:</p>
+        <ul>
+          <li>Administrative safeguards (e.g., staff training on HIPAA).</li>
+          <li>Physical safeguards (e.g., locked filing cabinets, secure office access).</li>
+          <li>Technical safeguards (e.g., encrypted electronic records, firewalls).</li>
+        </ul>
+        <p>Our staff signs confidentiality agreements, and we conduct regular risk assessments.</p>
+
+        <h3>6. Children's Privacy</h3>
+        <p>We do not knowingly collect PHI from children under 13 without parental consent. For minors, we follow state laws on parental access.</p>
+
+        <h3>7. Third-Party Websites and Services</h3>
+        <p>Our website or patient portal may link to external sites. We are not responsible for their privacy practices. Review their policies before providing information.</p>
+
+        <h3>8. Retention and Destruction</h3>
+        <p>We retain your records for [Insert Period, e.g., 7 years after last visit] as required by law. Records are securely destroyed thereafter.</p>
       </div>
     </div>
     <div id="hipaa-modal" class="modal" style="display:none;">

@@ -179,18 +179,71 @@
           if (aboutUsPara) {
             aboutUsPara.textContent = translations[lang]['AboutUsPara'];
           }
+          
+          // Translate all text content
           Object.keys(window.translations[lang]).forEach(function(key) {
             var elements = document.querySelectorAll('*');
             elements.forEach(function(el) {
-              if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3 && (el.textContent.trim() === key || el.textContent.trim() === window.translations['es'][key] || el.textContent.trim() === window.translations['en'][key])) {
-                el.textContent = window.translations[lang][key];
+              // Handle text content
+              if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                var text = el.textContent.trim();
+                if (text === key || 
+                    (window.translations['es'][key] && text === window.translations['es'][key]) || 
+                    (window.translations['en'][key] && text === window.translations['en'][key])) {
+                  el.textContent = window.translations[lang][key];
+                }
               }
-              if (el.placeholder === key || el.placeholder === window.translations['es'][key] || el.placeholder === window.translations['en'][key]) {
+              
+              // Handle placeholder text
+              if (el.placeholder && (el.placeholder === key || 
+                  (window.translations['es'][key] && el.placeholder === window.translations['es'][key]) || 
+                  (window.translations['en'][key] && el.placeholder === window.translations['en'][key]))) {
                 el.placeholder = window.translations[lang][key];
+              }
+              
+              // Handle button text specifically
+              if (el.tagName === 'BUTTON' || el.classList.contains('cta')) {
+                var text = el.textContent.trim();
+                if (text === key || 
+                    (window.translations['es'][key] && text === window.translations['es'][key]) || 
+                    (window.translations['en'][key] && text === window.translations['en'][key])) {
+                  el.textContent = window.translations[lang][key];
+                }
+              }
+              
+              // Handle span text (for cloud quotes)
+              if (el.tagName === 'SPAN') {
+                var text = el.textContent.trim();
+                if (text === key || 
+                    (window.translations['es'][key] && text === window.translations['es'][key]) || 
+                    (window.translations['en'][key] && text === window.translations['en'][key])) {
+                  el.textContent = window.translations[lang][key];
+                }
+              }
+              
+              // Handle h2, h3, p tags
+              if (el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P') {
+                var text = el.textContent.trim();
+                if (text === key || 
+                    (window.translations['es'][key] && text === window.translations['es'][key]) || 
+                    (window.translations['en'][key] && text === window.translations['en'][key])) {
+                  el.textContent = window.translations[lang][key];
+                }
+              }
+              
+              // Handle links
+              if (el.tagName === 'A') {
+                var text = el.textContent.trim();
+                if (text === key || 
+                    (window.translations['es'][key] && text === window.translations['es'][key]) || 
+                    (window.translations['en'][key] && text === window.translations['en'][key])) {
+                  el.textContent = window.translations[lang][key];
+                }
               }
             });
           });
-          // Update button text
+          
+          // Update button text for toggle
           englishBtn.textContent = window.translations[lang]['English'] || 'English';
           spanishBtn.textContent = window.translations[lang]['Spanish'] || 'Spanish';
         }
@@ -216,8 +269,23 @@
             'Patient Portal': 'Patient Portal',
             'Terms and Conditions': 'Terms and Conditions',
             'Privacy Policy': 'Privacy Policy',
+            'HIPAA Notice': 'HIPAA Notice',
             'English': 'English',
-            'Spanish': 'Spanish'
+            'Spanish': 'Spanish',
+            'Enriching your Health & Wellness': 'Enriching your Health & Wellness',
+            'Non Rushed Appointments': 'Non Rushed Appointments',
+            'Same Day Urgent Appointments': 'Same Day Urgent Appointments',
+            'Late and Some Weekend Appointments': 'Late and Some Weekend Appointments',
+            'New Patient': 'New Patient',
+            'Existing Patient': 'Existing Patient',
+            'Dr. Uday K Tata, MD': 'Dr. Uday K Tata, MD',
+            'Internal Medicine': 'Internal Medicine',
+            'Board-certified': 'Board-certified',
+            'Hours and Timings: 08:30 AM - 04:30 PM': 'Hours and Timings: 08:30 AM - 04:30 PM',
+            '2138 Scenic Hwy N Suite A': '2138 Scenic Hwy N Suite A',
+            'Snellville, GA 30078': 'Snellville, GA 30078',
+            '© 2025 LumenMed LLC. All rights reserved.': '© 2025 LumenMed LLC. All rights reserved.',
+            'Website Design by: Texas To Success Inc, All Rights Reserved': 'Website Design by: Texas To Success Inc, All Rights Reserved'
           },
           'es': {
             'Weight Loss Management': 'Gestión de Pérdida de Peso',
@@ -231,7 +299,7 @@
             'Telehealth Appointments': 'Citas de Telesalud',
             'Convenient virtual consultations from the comfort of your home.': 'Consultas virtuales convenientes desde la comodidad de tu hogar.',
             'About Us': 'Sobre Nosotros',
-            'Schedule Your Appointment': 'Programa tu cita',
+            'Schedule Your Appointment': 'Programa tu Cita',
             'Search': 'Buscar',
             'Our Services': 'Nuestros Servicios',
             'Contact Us': 'Contáctanos',
@@ -239,8 +307,23 @@
             'Patient Portal': 'Portal del Paciente',
             'Terms and Conditions': 'Términos y Condiciones',
             'Privacy Policy': 'Política de Privacidad',
+            'HIPAA Notice': 'Aviso HIPAA',
             'English': 'Inglés',
-            'Spanish': 'Español'
+            'Spanish': 'Español',
+            'Enriching your Health & Wellness': 'Enriqueciendo tu Salud y Bienestar',
+            'Non Rushed Appointments': 'Citas Sin Prisa',
+            'Same Day Urgent Appointments': 'Citas Urgentes el Mismo Día',
+            'Late and Some Weekend Appointments': 'Citas Tardías y Algunos Fines de Semana',
+            'New Patient': 'Paciente Nuevo',
+            'Existing Patient': 'Paciente Existente',
+            'Dr. Uday K Tata, MD': 'Dr. Uday K Tata, MD',
+            'Internal Medicine': 'Medicina Interna',
+            'Board-certified': 'Certificado por la Junta',
+            'Hours and Timings: 08:30 AM - 04:30 PM': 'Horarios: 08:30 AM - 04:30 PM',
+            '2138 Scenic Hwy N Suite A': '2138 Scenic Hwy N Suite A',
+            'Snellville, GA 30078': 'Snellville, GA 30078',
+            '© 2025 LumenMed LLC. All rights reserved.': '© 2025 LumenMed LLC. Todos los derechos reservados.',
+            'Website Design by: Texas To Success Inc, All Rights Reserved': 'Diseño Web por: Texas To Success Inc, Todos los Derechos Reservados'
           }
         };
         englishBtn.addEventListener('click', function() {
