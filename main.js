@@ -352,7 +352,7 @@
           const confirmed = confirm('You are now rerouting to external page which handles patient scheduling. Please return back if you do not wish to proceed.');
           
           if (confirmed) {
-            window.open('https://saas.agastha.com/AGPortal/servlet/AGSchedulerServlet?_qryStr=6stnpsvv8pU]u8=U8kP6z87mv8%3Ep8]nsp[us78=g[6sur]tiZ5=HEDG[]rrnOir8=[yoU8kS]ny8tn=i8o', '_blank');
+            window.open('https://patientkiosk.omnimd.com/#/check-in/U2FsdGVkX1%2BmmqUcoBrMUK6jEqUWOdnipb3OgUfl%2FYE%3D', '_blank');
           }
         });
 
@@ -363,7 +363,7 @@
           const confirmed = confirm('You are now rerouting to patient portal. Please return back if you do not wish to proceed.');
           
           if (confirmed) {
-            window.open('https://saas.agastha.com/onlineHP/jsp/portal.jsp?MTQ1Mg==', '_blank');
+            window.open('https://patientkiosk.omnimd.com/#/check-in/U2FsdGVkX1%2BmmqUcoBrMUK6jEqUWOdnipb3OgUfl%2FYE%3D', '_blank');
           }
         });
 
@@ -377,7 +377,7 @@
           const confirmed = confirm('You are now rerouting to patient portal. Please return back if you do not wish to proceed.');
           
           if (confirmed) {
-            window.open('https://saas.agastha.com/onlineHP/jsp/portal.jsp?MTQ1Mg==', '_blank');
+            window.open('https://patientkiosk.omnimd.com/#/check-in/U2FsdGVkX1%2BmmqUcoBrMUK6jEqUWOdnipb3OgUfl%2FYE%3D', '_blank');
           }
         });
 
