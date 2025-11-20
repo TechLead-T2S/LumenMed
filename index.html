@@ -16,8 +16,24 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Modal is hidden by default and only appears when button is clicked -->
-  <div id="appointment-modal" class="modal" style="display:none;">
+  <!-- Loading Screen with Animated Logo -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-logo-container">
+      <img src="images/white_lumen_paint-removebg.png" alt="LumenMed" class="loading-logo">
+      <div class="loading-text">
+        <h1 class="brand-name">LumenMed</h1>
+        <p class="brand-tagline">Excellence in Internal Medicine</p>
+      </div>
+    </div>
+    <div class="loading-progress">
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" class="main-content">
+    <!-- Modal is hidden by default and only appears when button is clicked -->
+    <div id="appointment-modal" class="modal" style="display:none;">
     <div class="modal-content">
       <span class="close" id="close-modal">&times;</span>
       <h2>Schedule Your Appointment</h2>
@@ -46,17 +62,22 @@
           <p>Board-certified</p>
         </div>
       </div>
-      <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="hamburger modern-hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
+        <span class="hamburger-line line-1"></span>
+        <span class="hamburger-line line-2"></span>
+        <span class="hamburger-line line-3"></span>
+        <div class="hamburger-glow"></div>
       </div>
-      <ul id="hamburger-dropdown" class="hamburger-dropdown" style="display:none;">
-        <li><a href="#aboutus-tile-modern" id="aboutus-link">About Us</a></li>
-        <li><a href="#services" id="services-link">Our Services</a></li>
-        <li><a href="#mobile-contact-qr" id="hamburger-contact-link">Contact Us</a></li>
-        <li><a href="#hours" id="hamburger-hours-link">Hours and Timing</a></li>
-        <li><a href="#" id="hamburger-portal-link">Patient Portal</a></li>
+      <ul id="hamburger-dropdown" class="hamburger-dropdown modern-dropdown" style="display:none;">
+        <div class="dropdown-backdrop"></div>
+        <div class="dropdown-content">
+          <li class="dropdown-item"><a href="#aboutus-tile-modern" id="aboutus-link"><span class="nav-icon">👨‍⚕️</span>About Us</a></li>
+          <li class="dropdown-item"><a href="#services" id="services-link"><span class="nav-icon">🏥</span>Our Services</a></li>
+          <li class="dropdown-item"><a href="#testimonials" id="testimonials-link"><span class="nav-icon">🗣️</span>Patient Testimonials</a></li>
+          <li class="dropdown-item"><a href="#mobile-contact-qr" id="hamburger-contact-link"><span class="nav-icon">📞</span>Contact Us</a></li>
+          <li class="dropdown-item"><a href="#hours" id="hamburger-hours-link"><span class="nav-icon">🕐</span>Hours and Timing</a></li>
+          <li class="dropdown-item"><a href="#" id="hamburger-portal-link"><span class="nav-icon">💻</span>Patient Portal</a></li>
+        </div>
       </ul>
       <div style="flex:1;"></div>
     </div>
@@ -129,48 +150,248 @@
     </div>
 
     <section id="page2" class="page-section">
-      <div class="aboutus-tile-modern" style="margin-top:320px;">
+      <div class="aboutus-tile-modern aboutus-container" id="aboutus-tile-modern" style="margin-top:320px;">
         <div class="aboutus-img-content-wrap">
-          <img src="images/uday-dp.jpeg" alt="Dr. Uday" class="aboutus-img-modern">
-          <div class="aboutus-content-modern">
-            <h3>About Us</h3>
-            <p>Dr. Uday K. Tata is a board-certified Internal Medicine physician with over 20 years of experience, recognized as one of Georgia’s top doctors for his compassionate, patient-centered approach. Dedicated to quality healthcare, he has experience in mental healthcare and weight management, empowering patients with personalized, evidence-based care. Dr. Tata has served as a Director at Emory University, advancing clinical programs, and excels as a teaching physician in Internal Medicine, mentoring future healthcare leaders. His commitment to excellence ensures every patient receives expert, attentive care tailored to their needs.</p>
+          <img src="images/uday-dp.jpeg" alt="Dr. Uday" class="aboutus-img-modern aboutus-image">
+          <div class="aboutus-content-modern aboutus-content">
+            <h3 class="aboutus-title">
+              <span class="letter-animation-wrapper">
+                <span class="letter" data-letter="A">A</span>
+                <span class="letter" data-letter="b">b</span>
+                <span class="letter" data-letter="o">o</span>
+                <span class="letter" data-letter="u">u</span>
+                <span class="letter" data-letter="t">t</span>
+                <span class="letter space" data-letter=" "> </span>
+                <span class="letter" data-letter="U">U</span>
+                <span class="letter" data-letter="s">s</span>
+              </span>
+            </h3>
+            <p class="aboutus-text">Dr. Uday K. Tata is a board-certified Internal Medicine physician with over 20 years of experience, recognized as one of Georgia's top doctors for his compassionate, patient-centered approach. Dedicated to quality healthcare, he has experience in mental healthcare and weight management, empowering patients with personalized, evidence-based care. Dr. Tata has served as a Director at Emory University, advancing clinical programs, and excels as a teaching physician in Internal Medicine, mentoring future healthcare leaders. His commitment to excellence ensures every patient receives expert, attentive care tailored to their needs.</p>
           </div>
         </div>
-        <img src="images/uday-award.jpg" alt="Dr. Uday Award" class="aboutus-award-img">
+        <img src="images/uday-award.jpg" alt="Dr. Uday Award" class="aboutus-award-img aboutus-award">
       </div>
-      <div class="services-border-box" style="border: 2px solid #2e6edb; border-radius: 32px; background: rgba(255,255,255,0.8); box-shadow: 0 8px 32px rgba(44, 130, 201, 0.10); width: 1200px; height: 600px; margin: 48px auto; padding: 48px 32px; overflow: visible;">
-        <div class="our-services-btn-top" id="our-services-btn-top" style="text-align:center; margin-bottom:0;">
-          <button class="cta">Our Services</button>
-        </div>
-        <div class="features-overlap-row" style="margin-top:32px;">
-          <div class="feature-overlap-tile tile1">
-            <div class="tile-icon">⚖️</div>
-            <div class="tile-title">Weight Loss Management</div>
-            <div class="tile-desc">Personalized plans and support to help you achieve and maintain a healthy weight.</div>
+      <div class="services-container" id="services">
+        <div class="services-border-box" style="border: 2px solid #2e6edb; border-radius: 32px; background: rgba(255,255,255,0.8); box-shadow: 0 8px 32px rgba(44, 130, 201, 0.10); width: 1200px; height: 600px; margin: 48px auto; padding: 48px 32px; overflow: visible;">
+          <div class="our-services-btn-top services-title" id="our-services-btn-top" style="text-align:center; margin-bottom:0;">
+            <button class="cta">Our Services</button>
           </div>
-          <div class="feature-overlap-tile tile2">
-            <div class="tile-icon">🩺</div>
-            <div class="tile-title">Chronic Disease Management</div>
-            <div class="tile-desc">Comprehensive care for chronic conditions to improve your quality of life.</div>
-          </div>
-          <div class="feature-overlap-tile tile3">
-            <div class="tile-icon">🧠</div>
-            <div class="tile-title">Mental Health</div>
-            <div class="tile-desc">Compassionate support and resources for your mental well-being.</div>
-          </div>
-          <div class="feature-overlap-tile tile4">
-            <div class="tile-icon">🛡️</div>
-            <div class="tile-title">Preventative Health Care</div>
-            <div class="tile-desc">Proactive screenings and guidance to keep you healthy and prevent illness.</div>
-          </div>
-          <div class="feature-overlap-tile tile5">
-            <div class="tile-icon">💻</div>
-            <div class="tile-title">Telehealth Appointments</div>
-            <div class="tile-desc">Convenient virtual consultations from the comfort of your home.</div>
+          <div class="features-overlap-row" style="margin-top:32px;">
+            <div class="feature-overlap-tile tile1 service-tile">
+              <div class="tile-icon">⚖️</div>
+              <div class="tile-title">Weight Loss Management</div>
+              <div class="tile-desc">Personalized plans and support to help you achieve and maintain a healthy weight.</div>
+            </div>
+            <div class="feature-overlap-tile tile2 service-tile">
+              <div class="tile-icon">🩺</div>
+              <div class="tile-title">Chronic Disease Management</div>
+              <div class="tile-desc">Comprehensive care for chronic conditions to improve your quality of life.</div>
+            </div>
+            <div class="feature-overlap-tile tile3 service-tile">
+              <div class="tile-icon">🧠</div>
+              <div class="tile-title">Mental Health</div>
+              <div class="tile-desc">Compassionate support and resources for your mental well-being.</div>
+            </div>
+            <div class="feature-overlap-tile tile4 service-tile">
+              <div class="tile-icon">🛡️</div>
+              <div class="tile-title">Preventative Health Care</div>
+              <div class="tile-desc">Proactive screenings and guidance to keep you healthy and prevent illness.</div>
+            </div>
+            <div class="feature-overlap-tile tile5 service-tile">
+              <div class="tile-icon">💻</div>
+              <div class="tile-title">Telehealth Appointments</div>
+              <div class="tile-desc">Convenient virtual consultations from the comfort of your home.</div>
+            </div>
           </div>
         </div>
       </div>
+      
+      <!-- AI Testimonials Hub -->
+      <div class="ai-testimonials-hub" id="testimonials">
+        <div class="testimonials-ai-container">
+          
+          <!-- Compact Header with AI Avatar -->
+          <div class="ai-header">
+            <div class="ai-avatar">
+              <div class="ai-core">
+                <div class="pulse-ring"></div>
+                <div class="ai-brain">
+                  <div class="thumbs-up">👍</div>
+                </div>
+              </div>
+            </div>
+            <div class="ai-intro">
+              <h3 class="ai-title">Patient Testimonials</h3>
+              <p class="ai-subtitle">Five-Star Reviews • Best-Curated Insights</p>
+              <div class="rating-display">
+                <div class="stars-cluster">
+                  <span class="star-icon">⭐</span>
+                  <span class="rating-value">5.0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Interactive Control Panel -->
+          <div class="ai-controls">
+            <button class="ai-btn primary" id="show-testimonials">
+              <span class="btn-icon">🤖</span>
+              <span class="btn-text">Analyze Reviews</span>
+              <div class="btn-glow"></div>
+            </button>
+            <button class="ai-btn secondary" id="ai-summary">
+              <span class="btn-icon">📊</span>
+              <span class="btn-text">AI Summary</span>
+              <div class="btn-glow"></div>
+            </button>
+          </div>
+          
+          <!-- Expandable Testimonials Grid -->
+          <div class="testimonials-expandable" id="testimonials-grid">
+            <div class="grid-overlay">
+              <div class="scan-line"></div>
+            </div>
+            
+            <!-- Compact Testimonial Cards -->
+            <div class="testimonial-mini-card" data-patient="mabel">
+              <div class="card-header">
+                <div class="patient-avatar">M</div>
+                <div class="patient-info">
+                  <span class="patient-name">Mabel del Valle</span>
+                  <div class="rating-mini">⭐⭐⭐⭐⭐</div>
+                </div>
+                <button class="expand-btn">+</button>
+              </div>
+              <div class="preview-text">DR. TATA AT LUMENMED IS AMAZING! THE OFFICE IS BEAUTIFUL...</div>
+              <div class="full-testimonial">
+                <div class="testimonial-content">
+                  <div class="quote-mark">"</div>
+                  <p>Dr. Tata at LUMENMED is amazing! The office is beautiful, easy to find, and the staff is very friendly. You can tell Dr. Tata truly cares about his patients and the community — he takes time to listen and explain everything clearly. It's rare to find a doctor who combines professionalism with such genuine care. Highly recommend! 100! Y hablan español</p>
+                  <div class="quote-mark closing">"</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-mini-card" data-patient="sharon">
+              <div class="card-header">
+                <div class="patient-avatar">S</div>
+                <div class="patient-info">
+                  <span class="patient-name">Sharon Davis</span>
+                  <div class="rating-mini">⭐⭐⭐⭐⭐</div>
+                </div>
+                <button class="expand-btn">+</button>
+              </div>
+              <div class="preview-text">Friendly staff! Dr. Tata is very attentive and thorough...</div>
+              <div class="full-testimonial">
+                <div class="testimonial-content">
+                  <div class="quote-mark">"</div>
+                  <p>Friendly staff! Dr. Tata is very attentive and thorough. LumenMed is one of the best practices I've seen in a long time.</p>
+                  <div class="quote-mark closing">"</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-mini-card" data-patient="bobby">
+              <div class="card-header">
+                <div class="patient-avatar">B</div>
+                <div class="patient-info">
+                  <span class="patient-name">Bobby Patterson</span>
+                  <div class="rating-mini">⭐⭐⭐⭐⭐</div>
+                </div>
+                <button class="expand-btn">+</button>
+              </div>
+              <div class="preview-text">Dr. Tata has been my physician for years and I've also worked...</div>
+              <div class="full-testimonial">
+                <div class="testimonial-content">
+                  <div class="quote-mark">"</div>
+                  <p>Dr. Tata has been my physician for years and I've also worked with him professionally. I admire him and his practice.</p>
+                  <div class="quote-mark closing">"</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-mini-card" data-patient="chang">
+              <div class="card-header">
+                <div class="patient-avatar">C</div>
+                <div class="patient-info">
+                  <span class="patient-name">Chang Lee</span>
+                  <div class="rating-mini">⭐⭐⭐⭐⭐</div>
+                </div>
+                <button class="expand-btn">+</button>
+              </div>
+              <div class="preview-text">I really appreciate LumenMed. Dr. Tata is very smart...</div>
+              <div class="full-testimonial">
+                <div class="testimonial-content">
+                  <div class="quote-mark">"</div>
+                  <p>I really appreciate LumenMed. Dr. Tata is very smart and cares about his patients. The clinic is also affordable. Highly recommend them.</p>
+                  <div class="quote-mark closing">"</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-mini-card" data-patient="srinivas">
+              <div class="card-header">
+                <div class="patient-avatar">S</div>
+                <div class="patient-info">
+                  <span class="patient-name">Srinivas Peeta</span>
+                  <div class="rating-mini">⭐⭐⭐⭐⭐</div>
+                </div>
+                <button class="expand-btn">+</button>
+              </div>
+              <div class="preview-text">This is the clinic I have used for over 7 years...</div>
+              <div class="full-testimonial">
+                <div class="testimonial-content">
+                  <div class="quote-mark">"</div>
+                  <p>This is the clinic I have used for over 7 years. Recently, it has been renewed with new infrastructure under Dr. Tata. The facility looks bright and clean.</p>
+                  <div class="quote-mark closing">"</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-mini-card" data-patient="renuka">
+              <div class="card-header">
+                <div class="patient-avatar">R</div>
+                <div class="patient-info">
+                  <span class="patient-name">Renuka Devi</span>
+                  <div class="rating-mini">⭐⭐⭐⭐⭐</div>
+                </div>
+                <button class="expand-btn">+</button>
+              </div>
+              <div class="preview-text">Dr. Uday is very experienced physician, known him...</div>
+              <div class="full-testimonial">
+                <div class="testimonial-content">
+                  <div class="quote-mark">"</div>
+                  <p>Dr. Uday is very experienced physician, known him for almost 20 years. I really recommend him to go to Primary care Physician.</p>
+                  <div class="quote-mark closing">"</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- AI Summary Panel -->
+          <div class="ai-summary-panel" id="ai-summary-panel">
+            <div class="summary-header">
+              <div class="ai-icon">🧠</div>
+              <h4>AI Analysis Complete</h4>
+            </div>
+            <div class="summary-stats">
+              <div class="stat-item">
+                <span class="stat-label">Average Rating</span>
+                <span class="stat-value">5.0 ⭐</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Sentiment</span>
+                <span class="stat-value positive">Exceptional</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Key Themes</span>
+                <span class="stat-value">Professional • Caring • Modern</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <footer class="main-footer">
         <div class="footer-social">
           <a href="#" aria-label="Instagram">
@@ -399,6 +620,7 @@
         <p>For more information about privacy rights, visit: <a href="https://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/noticepp.html" target="_blank">www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/noticepp.html</a></p>
       </div>
     </div>
+  </div> <!-- End main-content -->
     <script src="main.js"></script>
     <script>
     </script>
