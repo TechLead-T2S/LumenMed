@@ -110,11 +110,12 @@ function initializeButtonAnimations() {
       this.style.transform = 'scale(0.95)';
       setTimeout(() => {
         this.style.transform = '';
-        // Open modal or perform action
-        const modal = document.getElementById('appointment-modal');
-        if (modal) {
-          modal.style.display = 'block';
-          modal.style.animation = 'modalSlideIn 0.5s ease-out';
+        // Show confirmation popup before redirecting
+        const userConfirmed = confirm('You are now rerouting to external page which handles patient scheduling. Please return back if you do not wish to proceed.');
+        if (userConfirmed) {
+          // Open external booking page in new tab
+          // Replace 'https://your-booking-site.com' with your actual booking system URL
+          window.open('https://your-booking-site.com', '_blank');
         }
       }, 150);
     });
@@ -285,24 +286,7 @@ function initializeAboutUsAnimations() {
 }
 
 // Placeholder for future JS functionality. Currently, all graphics and layout are handled by HTML/CSS.
-// Modal open/close logic
-      document.addEventListener('DOMContentLoaded', function() {
-        var modal = document.getElementById('appointment-modal');
-        var openBtn = document.getElementById('open-modal');
-        var closeBtn = document.getElementById('close-modal');
-        openBtn.onclick = function(e) {
-          e.preventDefault();
-          modal.style.display = 'block';
-        };
-        closeBtn.onclick = function() {
-          modal.style.display = 'none';
-        };
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = 'none';
-          }
-        };
-      });
+
       document.getElementById('terms-link').onclick = function(e) {
         e.preventDefault();
         document.getElementById('terms-modal').style.display = 'block';
