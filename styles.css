@@ -17,6 +17,68 @@
   overflow: hidden;
 }
 
+/* Pre-launch Announcement */
+.pre-launch-announcement {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10001;
+  animation: announcementSlide 2s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.announcement-badge {
+  background: linear-gradient(45deg, #2e6edb, #26c6da);
+  padding: 12px 30px;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(46, 110, 219, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.announcement-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.announcement-text {
+  color: #ffffff;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes announcementSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
 .loading-screen::before {
   content: '';
   position: absolute;
@@ -879,6 +941,237 @@
   right: 5px;
 }
 
+/* Modern Image Slideshow Styles */
+.slideshow-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.gallery-services-btn-top {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-services-btn-top .cta {
+  display: inline-block;
+  margin-top: 16px;
+  background: linear-gradient(90deg, #009688 0%, #26c6da 100%);
+  color: #fff;
+  padding: 16px 32px;
+  text-decoration: none;
+  border-radius: 32px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 150, 136, 0.2);
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 0.5px;
+}
+
+.gallery-services-btn-top .cta:hover {
+  background: linear-gradient(90deg, #00796b 0%, #0097a7 100%);
+  box-shadow: 0 6px 20px rgba(0, 150, 136, 0.3);
+  transform: translateY(-2px);
+}
+
+.slideshow-wrapper {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.8s ease;
+}
+
+.slide:hover .slide-image {
+  transform: scale(1.05);
+}
+
+.slide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 40px 30px 30px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.slide.active .slide-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-overlay h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-overlay p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.slideshow-controls {
+  display: none;
+}
+
+.prev-btn, .next-btn {
+  background: rgba(46, 110, 219, 0.9);
+  border: none;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: rgba(46, 110, 219, 1);
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(46, 110, 219, 0.4);
+}
+
+.slide-indicators {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.indicator.active {
+  background: #2e6edb;
+  transform: scale(1.2);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(46, 110, 219, 0.6);
+}
+
+.indicator:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.1);
+}
+
+/* Slideshow animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.9);
+  }
+}
+
+/* Responsive design for slideshow */
+@media (max-width: 768px) {
+  .slideshow-container {
+    margin: 30px auto;
+    padding: 0 10px;
+  }
+  
+  .slide {
+    height: 350px;
+  }
+  
+  .slide-overlay h3 {
+    font-size: 1.4rem;
+  }
+  
+  .slide-overlay p {
+    font-size: 1rem;
+  }
+  
+  .slideshow-controls {
+    padding: 10px 15px;
+    gap: 15px;
+  }
+  
+  .prev-btn, .next-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+}
+
 /* AI Summary Panel */
 .ai-summary-panel {
   background: rgba(0, 0, 0, 0.6);
@@ -1345,12 +1638,12 @@ nav, .hamburger-dropdown, .hamburger-dropdown li, .hamburger-dropdown a {
 
 .cloud-quote {
   position: relative;
-  width: 180px;
+  width: 220px;
   height: 65px;
   background: white;
   border: 3px solid #4fc3f7;
   border-radius: 32px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #2196f3;
   text-align: center;
@@ -2537,9 +2830,8 @@ body {
   max-width: 45%;
   text-align: center;
   padding: 10px 18px;
-  text-shadow: 0 0 8px rgba(46, 110, 219, 0.6), 0 0 12px rgba(46, 110, 219, 0.4), 0 0 16px rgba(46, 110, 219, 0.2);
   font-family: 'Cinzel Decorative', serif;
-  font-size: 1.18rem;
+  font-size: 1.4rem;
   background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;

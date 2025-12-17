@@ -18,6 +18,11 @@
 <body>
   <!-- Loading Screen with Animated Logo -->
   <div id="loading-screen" class="loading-screen">
+    <div class="pre-launch-announcement">
+      <div class="announcement-badge">
+        <span class="announcement-text">Now Accepting 2026 New Patient Enrollments</span>
+      </div>
+    </div>
     <div class="loading-logo-container">
       <img src="images/white_lumen_paint-removebg.png" alt="LumenMed" class="loading-logo">
       <div class="loading-text">
@@ -54,6 +59,7 @@
         <div class="dropdown-content">
           <li class="dropdown-item"><a href="#aboutus-tile-modern" id="aboutus-link"><span class="nav-icon">👨‍⚕️</span>About Us</a></li>
           <li class="dropdown-item"><a href="#services" id="services-link"><span class="nav-icon">🏥</span>Our Services</a></li>
+          <li class="dropdown-item"><a href="#gallery-services-btn-top" id="gallery-link"><span class="nav-icon">📷</span>Gallery</a></li>
           <li class="dropdown-item"><a href="#testimonials" id="testimonials-link"><span class="nav-icon">🗣️</span>Patient Testimonials</a></li>
           <li class="dropdown-item"><a href="#mobile-contact-qr" id="hamburger-contact-link"><span class="nav-icon">📞</span>Contact Us</a></li>
           <li class="dropdown-item"><a href="#hours" id="hamburger-hours-link"><span class="nav-icon">🕐</span>Hours and Timing</a></li>
@@ -73,11 +79,17 @@
     <div class="news-bulletin">
       <div class="news-content">
         <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Accepting Medicare New Patients</span>
         <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Accepting Medicare New Patients</span>
         <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Accepting Medicare New Patients</span>
         <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Accepting Medicare New Patients</span>
         <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Accepting Medicare New Patients</span>
         <span class="news-text">Call Our Help-Desk Now for a Quick Appointment : +1(678)404-8600</span>
+        <span class="news-text">Accepting Medicare New Patients</span>
       </div>
     </div>
   </div>
@@ -97,7 +109,7 @@
       <div class="appointment-details">
         <div class="appointment-line">
           <span> Non Rushed Appointments</span>
-          <span> Same Day Urgent Appointments</span>
+          <span> Same Day Appointments</span>
         </div>
         <div class="appointment-line">
           <span> Telehealth Appointments</span>
@@ -107,7 +119,7 @@
       <div class="button-container">
         <div class="appointment-button-with-quote">
           <div class="cloud-quote">
-            <span>New Patient</span>
+            <span>Accepting New Patients</span>
           </div>
           <a class="cta" href="#" id="schedule-appointment-btn">Schedule Your Appointment</a>
         </div>
@@ -183,6 +195,71 @@
               <div class="tile-title">Telehealth Appointments</div>
               <div class="tile-desc">Convenient virtual consultations from the comfort of your home.</div>
             </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modern Image Slideshow -->
+      <div class="slideshow-container">
+        <div class="gallery-services-btn-top" id="gallery-services-btn-top">
+          <button class="cta">Gallery</button>
+        </div>
+        <div class="slideshow-wrapper">
+          <div class="slide-track">
+            <div class="slide active">
+              <img src="images/clean-clinic.jpeg" alt="Clean Clinic Environment" class="slide-image">
+              <div class="slide-overlay">
+                <h3>Clean & Safe Environment</h3>
+                <p>State-of-the-art facility maintained to the highest standards</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="images/clinic-dp.jpeg" alt="Modern Clinic" class="slide-image">
+              <div class="slide-overlay">
+                <h3>Modern Medical Facility</h3>
+                <p>Advanced equipment and comfortable patient areas</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="images/doc-check-fem.jpeg" alt="Female Doctor Consultation" class="slide-image">
+              <div class="slide-overlay">
+                <h3>Comprehensive Care</h3>
+                <p>Thorough examinations with compassionate attention</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="images/doc-check.jpeg" alt="Doctor Consultation" class="slide-image">
+              <div class="slide-overlay">
+                <h3>Expert Medical Care</h3>
+                <p>Professional consultations tailored to your needs</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="images/happy.jpeg" alt="Happy Patients" class="slide-image">
+              <div class="slide-overlay">
+                <h3>Patient Satisfaction</h3>
+                <p>Your health and happiness are our top priorities</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="images/yawn.jpeg" alt="Wellness Check" class="slide-image">
+              <div class="slide-overlay">
+                <h3>Complete Wellness</h3>
+                <p>Comprehensive health evaluations and preventive care</p>
+              </div>
+            </div>
+          </div>
+          <div class="slideshow-controls">
+            <button class="prev-btn" id="prevBtn">‹</button>
+            <div class="slide-indicators">
+              <span class="indicator active" data-slide="0"></span>
+              <span class="indicator" data-slide="1"></span>
+              <span class="indicator" data-slide="2"></span>
+              <span class="indicator" data-slide="3"></span>
+              <span class="indicator" data-slide="4"></span>
+              <span class="indicator" data-slide="5"></span>
+            </div>
+            <button class="next-btn" id="nextBtn">›</button>
           </div>
         </div>
       </div>
@@ -400,7 +477,16 @@
           <a href="https://www.google.com/maps/search/?api=1&query=2138+Scenic+Hwy+N+Suite+A+Snellville+GA+30078" target="_blank" style="color:#fff; text-decoration:underline;">2138 Scenic Hwy N Suite A<br>Snellville, GA 30078</a>
         </div>
         <div class="footer-hours" id="hours" style="text-align:center; color:#006d5b; font-size:1.1rem; margin:12px 0; font-family:'Cinzel Decorative',serif; font-weight:600;">
-          <strong>Hours and Timings: 08:30 AM - 04:30 PM</strong>
+          <strong>Hours and Timings:</strong><br>
+          <div style="margin-top:8px; line-height:1.6; text-align:left; display:inline-block;">
+            <div><strong>Monday:</strong> 8:00 am - 4:30 pm</div>
+            <div><strong>Tuesday:</strong> 8:00 am - 6:00 pm</div>
+            <div><strong>Wednesday:</strong> 8:00 am - 12:00 pm</div>
+            <div><strong>Thursday:</strong> 8:00 am - 6:00 pm</div>
+            <div><strong>Friday:</strong> 8:00 am - 4:30 pm</div>
+            <div><strong>Saturday:</strong> 8:00 am - 12:00 pm</div>
+            <div><strong>Sunday:</strong> Closed</div>
+          </div>
         </div>
         <div class="footer-legal">
           <a href="#" id="terms-link">Terms and Conditions</a>
