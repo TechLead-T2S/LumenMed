@@ -5155,6 +5155,15 @@ body {
   
   .footer-hours {
     font-size: 0.85rem;
+    color: white !important;
+  }
+  
+  .footer-hours div {
+    color: white !important;
+  }
+  
+  .footer-hours strong {
+    color: white !important;
   }
 }
 
@@ -5428,6 +5437,10 @@ div.services-border-box,
     font-size: 0.75rem !important;
     letter-spacing: 0.3px !important;
   }
+
+  .footer-designer a {
+    color: white !important;
+  }
   
   /* Highlight effect when mobile QR section is targeted */
   .mobile-qr-section:target {
@@ -5435,5 +5448,137 @@ div.services-border-box,
     box-shadow: 0 4px 20px rgba(46, 110, 219, 0.3) !important;
     transform: scale(1.02) !important;
     transition: all 0.3s ease-in-out !important;
+  }
+}
+
+/* Insurance Partners Section */
+.insurance-partners-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin: 40px 0;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.insurance-partners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.insurance-partners-btn-top {
+  margin-bottom: 40px;
+}
+
+.insurance-partners-btn-top .cta {
+  background: linear-gradient(135deg, #2e6edb 0%, #26c6da 100%);
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(46, 110, 219, 0.3);
+  transition: all 0.3s ease;
+}
+
+.insurance-partners-btn-top .cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(46, 110, 219, 0.4);
+}
+
+.insurance-logos-scroll {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  border-radius: 15px;
+  padding: 30px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.insurance-logos-track {
+  display: flex;
+  animation: scroll-logos 10s linear infinite;
+  gap: 40px;
+  align-items: center;
+  width: calc(200% + 40px);
+}
+
+.insurance-logo {
+  flex-shrink: 0;
+  width: 150px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.insurance-logo:hover {
+  transform: scale(1.05);
+}
+
+.insurance-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.insurance-logo:hover img {
+  filter: brightness(1);
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 20px));
+  }
+}
+
+/* Mobile Styles for Insurance Partners */
+@media (max-width: 768px) {
+  .insurance-partners-section {
+    padding: 40px 15px;
+    margin: 20px 10px;
+  }
+  
+  .insurance-partners-btn-top .cta {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+  
+  .insurance-logo {
+    width: 120px;
+    height: 60px;
+  }
+  
+  .insurance-logos-track {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .insurance-partners-section {
+    padding: 30px 10px;
+  }
+  
+  .insurance-logo {
+    width: 100px;
+    height: 50px;
+  }
+  
+  .insurance-logos-track {
+    gap: 15px;
   }
 }
