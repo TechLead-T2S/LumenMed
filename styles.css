@@ -5565,6 +5565,18 @@ div.services-border-box,
   
   .insurance-logos-track {
     gap: 20px;
+    /* Width calculation: 11 logos × 120px + 10 gaps × 20px = 1520px per set, × 2 sets = 3040px + extra for seamless transition */
+    width: calc(11 * 140px * 2);
+    animation: scroll-logos-mobile 25s linear infinite;
+  }
+  
+  @keyframes scroll-logos-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50%));
+    }
   }
 }
 
@@ -5580,5 +5592,17 @@ div.services-border-box,
   
   .insurance-logos-track {
     gap: 15px;
+    /* Width calculation: 11 logos × 100px + 10 gaps × 15px = 1250px per set, × 2 sets = 2500px + extra for seamless transition */
+    width: calc(11 * 115px * 2);
+    animation: scroll-logos-small 30s linear infinite;
+  }
+  
+  @keyframes scroll-logos-small {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50%));
+    }
   }
 }
